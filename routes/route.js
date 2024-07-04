@@ -6,8 +6,12 @@ router.get("/", (req, res) => {
 });
 
 router.get("/new", (req, res) => {
-  res.send("New User");
+  res.render("users/new", { firstName: "Darshana" });
 });
+
+router.post('/', (req, res) => {
+  res.send("Create User");
+})
 
 router
   .route("/:id")

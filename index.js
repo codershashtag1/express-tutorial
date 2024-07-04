@@ -2,8 +2,9 @@ const express = require("express");
 const app = express();
 const userRouter = require("./routes/route");
 
-app.set("view engine", "ejs");
+app.use(express.static("public"));
 
+app.set("view engine", "ejs");
 app.get("/", (req, res) => {
   // res.send("Hii");
   // res.sendStatus(500);
